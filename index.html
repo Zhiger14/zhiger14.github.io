@@ -5,41 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frizzy</title>
     <style>
+        /* Градиентный фон */
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
-            background: linear-gradient(to bottom, #ffffff, #f0f0f0);
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74ebd5, #acb6e5);
+            text-align: center;
         }
+
+        /* Анимация заголовка */
         h1 {
-            font-size: 36px;
-            margin-top: 50px;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s ease-in-out forwards;
         }
+
+        /* Анимация появления текста */
         p {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 1.2em;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
+
+        /* Кнопка */
         .button {
             display: inline-block;
+            margin-top: 20px;
             padding: 15px 30px;
-            font-size: 18px;
+            font-size: 1.2em;
             color: white;
-            background-color: #007bff;
-            text-decoration: none;
+            background-color: #007BFF;
+            border: none;
             border-radius: 5px;
-            transition: 0.3s;
+            text-decoration: none;
+            transition: transform 0.3s ease, background-color 0.3s ease;
         }
+
+        /* Эффект при наведении на кнопку */
         .button:hover {
             background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-
     <h1>Frizzy</h1>
     <p>Что можно сделать, чтобы сайт был интересным?</p>
     <a href="https://www.tiktok.com/@frizexen?_t=ZM-8ugRkvSap2z&_r=1" class="button" target="_blank">Мой TikTok канал</a>
-
 </body>
 </html>
